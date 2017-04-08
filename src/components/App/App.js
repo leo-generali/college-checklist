@@ -16,17 +16,17 @@ class App extends Component {
   render() {
     return (
       <Router > 
-        <div className="App">
-          <ul>
-            <li><Link to="/">Search</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/notes">Notes</Link></li>
-
+        <div className="app">
+          <ul className="header">
+            <li className="header--item">
+              <Link className="header--item__link" activeClassName="active" to="/">Search</Link>
+            </li> 
+            <li className="header--item"><Link className="header--item__link" to="/about">About</Link></li>
+            <li className="header--item"><Link className="header--item__link" to="/notes">Notes</Link></li>
+          </ul>
             <Route exact path="/" component={Search} />
             <Route path="/about" component={About} />
             <Route path="/notes" component={Notes} />
-            <Route path="/*" component={NotFound} />
-          </ul>
         </div>
       </Router>
     );

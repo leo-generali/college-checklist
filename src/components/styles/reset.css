@@ -19,7 +19,6 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -30,6 +29,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
+  font-size: 62.5%; 
 }
 ol, ul {
   list-style: none;
@@ -46,3 +46,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+h1 {font-size: 5.6rem}
+h2 {font-size: 4.8rem}
+h3 {font-size: 4.0rem}
+h4 {font-size: 3rem}
+h5 {font-size: 2rem}
+p  {font-size: 1rem}
+a  {font-size: 1rem}
