@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Link,
+  NavLink
 } from 'react-router-dom';
 
 import About from '../About/About';
@@ -19,12 +20,25 @@ class App extends Component {
         <div className="app">
           <ul className="header">
             <li className="header--item">
-              <Link className="header--item__link"  activeStyle={{ color: 'red' }} to="/">Search</Link>
+              <NavLink 
+                className="header--item__link" 
+                activeClassName="header--item__active"
+                to="/search">Search</NavLink>
             </li> 
-            <li className="header--item"><Link className="header--item__link" to="/about">About</Link></li>
-            <li className="header--item"><Link className="header--item__link" to="/notes">Notes</Link></li>
+            <li className="header--item">
+              <NavLink 
+                className="header--item__link" 
+                activeClassName="header--item__active"
+                to="/about">About</NavLink>
+            </li>
+            <li className="header--item">
+              <NavLink 
+                className="header--item__link" 
+                activeClassName="header--item__active"
+                to="/notes">Notes</NavLink>
+            </li>
           </ul>
-            <Route exact path="/" component={Search} />
+            <Route path="/search" component={Search} />
             <Route path="/about" component={About} />
             <Route path="/notes" component={Notes} />
         </div>
