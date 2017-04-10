@@ -73,9 +73,8 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 100%;
   background: #1d3557;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
@@ -98,7 +97,7 @@ p {
 .header--item__link {
   color: #FCFCFC;
   text-decoration: none;
-  padding: 1rem 2rem;
+  padding: 1rem 20px;
   font-size: 1rem; }
 
 .header--item__active {
