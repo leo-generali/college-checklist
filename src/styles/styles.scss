@@ -1,5 +1,7 @@
 @import "mixins";
 @import "reset";
 @import "variables";
+@import "./components/helpers";
 
 @import "./components/app";
+@import "./components/search";

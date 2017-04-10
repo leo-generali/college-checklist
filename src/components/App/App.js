@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <Router > 
         <div className="app">
-          <ul className="header">
+          <ul className="header margin-spacer">
             <li className="header--item">
               <NavLink 
                 className="header--item__link" 
@@ -38,9 +38,11 @@ class App extends Component {
                 to="/notes">Notes</NavLink>
             </li>
           </ul>
+          <main className="body">
             <Route path="/search" component={Search} />
             <Route path="/about" component={About} />
             <Route path="/notes" component={Notes} />
+          </main>
         </div>
       </Router>
     );

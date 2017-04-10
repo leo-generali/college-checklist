@@ -39,3 +39,8 @@
   border: 1px solid $header-font;
   margin: -1px;
 }
+
+.body {
+  display: flex;
+  justify-content: center;
+}
