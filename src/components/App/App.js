@@ -10,7 +10,7 @@ import Search from '../Search/Search';
 import Notes from '../Notes/Notes';
 import NotFound from '../NotFound/NotFound';
 
-import reset from '../styles/app.css';
+import '../../css/styles.css';
 
 class App extends Component {
   render() {
@@ -19,7 +19,7 @@ class App extends Component {
         <div className="app">
           <ul className="header">
             <li className="header--item">
-              <Link className="header--item__link" activeClassName="active" to="/">Search</Link>
+              <Link className="header--item__link"  activeStyle={{ color: 'red' }} to="/">Search</Link>
             </li> 
             <li className="header--item"><Link className="header--item__link" to="/about">About</Link></li>
             <li className="header--item"><Link className="header--item__link" to="/notes">Notes</Link></li>
