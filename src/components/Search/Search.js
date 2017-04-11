@@ -5,9 +5,7 @@ class Search extends Component {
     return (
       <section className="card">
         <form className="form-wrapper"> 
-          <div className="search-wrapper">
-            <input className="searchbar searchbar--search" type="text" />
-          </div>
+          <input className="searchbar searchbar--search" type="text" />
           <input className="searchbar searchbar--submit" type="submit" />
         </form>
       </section>

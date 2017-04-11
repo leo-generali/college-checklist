@@ -13,6 +13,7 @@
 
 .form-wrapper {
   display: flex; 
+  flex-direction: row;
 }
 
 .searchbar {
@@ -21,10 +22,6 @@
   padding: 6px 15px 6px 15px;
 
   font-family: $font-stack;
-}
-
-.search-wrapper {
-  width: 100%;
 }
 
 .searchbar--search {
@@ -45,6 +42,8 @@
   font-weight: bold;
   letter-spacing: 0.8px;
   width: 100px;
+
+  flex-grow: 1;
 
   background: $searchbar-submit-backup;
   background: $searchbar-submit;

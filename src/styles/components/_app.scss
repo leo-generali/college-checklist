@@ -28,6 +28,8 @@
   color: $header-font;
   text-decoration: none;
   padding: 1rem 20px;
+  flex-grow: 1;
+  flex-basis: 0;
 
   @include font-size(1);
 }
