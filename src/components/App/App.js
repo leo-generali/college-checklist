@@ -16,6 +16,18 @@ import '../../css/styles.css';
 class App extends Component {
   constructor() {
     super();
+
+    this.updateSearch=this.updateSearch.bind(this);
+
+    this.state = {
+      searchForm: ""
+    }
+  }
+
+  updateSearch = (e) => {
+    const searchForm = e.currentTarget.date.value;
+    console.log(e);
+    this.setState({searchForm: searchForm})
   }
 
   render() {
@@ -46,7 +58,8 @@ class App extends Component {
             <Route 
               path="/search" 
               component={Search}
-              
+              searchForm={this.state.searchForm}
+              updateSearch={this.updateSearch}
             />
             <Route path="/about" component={About} />
             <Route path="/notes" component={Notes} />

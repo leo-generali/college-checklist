@@ -13,8 +13,10 @@ class Search extends Component {
       <section className="card">
         <form className="form-wrapper" onSubmit={e => this.searchSchool(e, "test")}> 
           <input 
-            className="searchbar searchbar--search" 
+            className="searchbar searchbar--search"
+            value={this.props.searchForm}
             type="text" 
+            onChange={this.props.updateSearch} 
           />
           <input 
             className="searchbar searchbar--submit" 
