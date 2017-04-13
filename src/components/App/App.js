@@ -58,6 +58,7 @@ class App extends Component {
             <Route 
               path="/search" 
               component={Search}
+              render={(props)}
               searchForm={this.state.searchForm}
               updateSearch={this.updateSearch}
             />
