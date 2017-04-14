@@ -25,8 +25,9 @@ class App extends Component {
   }
 
   updateSearch = (e) => {
-    const searchForm = e.currentTarget.date.value;
+    const searchForm = e.currentTarget.value;
     console.log(e);
+    console.log(searchForm);
     this.setState({searchForm: searchForm})
   }
 
@@ -39,7 +40,7 @@ class App extends Component {
               <NavLink 
                 className="header--item__link" 
                 activeClassName="header--item__active"
-                to="/search">Search</NavLink>
+                to="/">Search</NavLink>
               </li> 
             <li className="header--item">
               <NavLink 
@@ -56,11 +57,11 @@ class App extends Component {
           </ul>
           <main className="body">
             <Route 
-              path="/search" 
-              component={Search}
-              render={(props)}
-              searchForm={this.state.searchForm}
-              updateSearch={this.updateSearch}
+              exact path="/" 
+              render={ () => <Search 
+                searchForm={this.state.searchForm}
+                updateSearch={this.updateSearch}
+              />}
             />
             <Route path="/about" component={About} />
             <Route path="/notes" component={Notes} />
