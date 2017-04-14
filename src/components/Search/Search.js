@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { getJSON } from '../../helpers/xmlhttprequest';
-import api from '../../helpers/api.js';
+
 
 class Search extends Component {
   
   searchSchool(event, url) {
     event.preventDefault();
-    console.log(api);
     getJSON(this.props.searchForm);
   }
 

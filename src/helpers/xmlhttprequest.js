@@ -1,6 +1,13 @@
+import api from './api.js';
+
 export function getJSON(url) {
 
-  console.log(url);
+  console.log(
+    api.prefix + 
+    url +
+    api.key
+  );
+
   var request = new XMLHttpRequest();
   
   request.onreadystatechange = function() {
