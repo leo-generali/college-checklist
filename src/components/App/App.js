@@ -26,8 +26,6 @@ class App extends Component {
 
   updateSearch = (e) => {
     const searchForm = e.currentTarget.value;
-    console.log(e);
-    console.log(searchForm);
     this.setState({searchForm: searchForm})
   }
 

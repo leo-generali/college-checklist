@@ -1,4 +1,5 @@
 export function getJSON(url) {
+
   console.log(url);
   var request = new XMLHttpRequest();
   
