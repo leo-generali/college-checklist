@@ -1,12 +1,18 @@
 import api from './api.js';
+import { urlCreator } from './url_creator.js';
 
 export function getJSON(url) {
 
+  const mods = urlCreator();
+
   console.log(
     api.prefix + 
-    url +
+    url + "&_fields=" +
+    mods +
     api.key
   );
+
+  console.log(mods);
 
   var request = new XMLHttpRequest();
   
