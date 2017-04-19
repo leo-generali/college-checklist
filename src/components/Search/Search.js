@@ -6,8 +6,11 @@ class Search extends Component {
   
   searchSchool(event) {
     event.preventDefault();
-    const data = getJSON(this.props.searchForm, success);
-    console.log(data);
+    console.log(success);
+    console.log("Search");
+    getJSON(this.props.searchForm, success);
+    console.log(test);
+    const test = getJSON(this.props.searchForm, success);
   }
 
   render() {

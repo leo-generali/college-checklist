@@ -15,7 +15,12 @@ export function getJSON(name, callback) {
   
   request.onload = function() {
     if (this.readyState === 4 && this.status === 200) {
-      return callback( this.responseText );       
+      console.log("onload");
+      
+      var response = callback( this.responseText );
+      
+      console.log(response);
+      return response;       
     }
   };
 
@@ -24,6 +29,6 @@ export function getJSON(name, callback) {
 }
 
 export function success(data) {
-  console.log("lol");
-  console.log(data);
+  console.log("success");
+  return data;
 }
