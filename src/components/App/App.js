@@ -20,7 +20,8 @@ class App extends Component {
     this.updateSearch=this.updateSearch.bind(this);
 
     this.state = {
-      searchForm: ""
+      searchForm: "",
+      collegeInfo: {}
     }
   }
 

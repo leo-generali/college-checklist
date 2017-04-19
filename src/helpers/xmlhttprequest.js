@@ -1,7 +1,7 @@
 import api from './api.js';
 import { urlCreator } from './url_creator.js';
 
-export function getJSON(name) {
+export function getJSON(name, callback) {
 
   const mods = urlCreator();
 
@@ -11,18 +11,19 @@ export function getJSON(name) {
     mods +
     api.key;
 
-  console.log(url);
-
   var request = new XMLHttpRequest();
   
-  request.onreadystatechange = function() {
+  request.onload = function() {
     if (this.readyState === 4 && this.status === 200) {
-      console.log(JSON.parse(this.responseText)); 
-      return JSON.parse(this.responseText); 
+      return callback( this.responseText );       
     }
   };
 
   request.open("GET", url, true);
   request.send();
-  
+}
+
+export function success(data) {
+  console.log("lol");
+  console.log(data);
 }
