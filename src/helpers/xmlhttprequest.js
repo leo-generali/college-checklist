@@ -11,24 +11,41 @@ export function getJSON(name, callback) {
     mods +
     api.key;
 
-  var request = new XMLHttpRequest();
+    fetch(url).then(function(response){
+      return response.json();
+    }).then(function(json){
+      console.log(json.results[0]);
+    });
+}
+
+// export function getJSON(name, callback) {
+
+//   const mods = urlCreator();
+
+//   const url = 
+//     api.prefix + 
+//     name + "&_fields=" +
+//     mods +
+//     api.key;
+
+//   const request = new XMLHttpRequest();
   
-  request.onload = function() {
-    if (this.readyState === 4 && this.status === 200) {
-      console.log("onload");
+//   request.onload = function() {
+//     if (this.readyState === 4 && this.status === 200) {
+//       console.log("onload");
       
-      var response = callback( this.responseText );
-      
-      console.log(response);
-      return response;       
-    }
-  };
+//       callback( this.responseText );
+//     }
+//   };
 
-  request.open("GET", url, true);
-  request.send();
-}
+//   request.open("GET", url, true);
+//   request.send();
 
-export function success(data) {
-  console.log("success");
-  return data;
-}
+// }
+
+// export function success(data) {
+//   console.log("success");
+
+//   console.log(data);
+//   return JSON.parse(data);
+// }
