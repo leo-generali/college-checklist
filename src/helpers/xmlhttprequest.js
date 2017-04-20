@@ -14,7 +14,7 @@ export function getJSON(name, callback) {
     fetch(url).then(function(response){
       return response.json();
     }).then(function(json){
-      console.log(json.results[0]);
+      return json.results[0];
     });
 }
 
@@ -43,9 +43,9 @@ export function getJSON(name, callback) {
 
 // }
 
-// export function success(data) {
-//   console.log("success");
+export function success(data) {
+  console.log("success");
 
-//   console.log(data);
-//   return JSON.parse(data);
-// }
+  console.log(data);
+  return JSON.parse(data);
+}

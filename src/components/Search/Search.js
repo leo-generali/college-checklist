@@ -1,22 +1,11 @@
 import React, { Component } from 'react';
-import { getJSON, success } from '../../helpers/xmlhttprequest';
-
-
 
 class Search extends Component {
   
-  searchSchool(event, callback) {
-    event.preventDefault();
-
-    getJSON(this.props.searchForm)
-  }
-
-
-
   render() {
     return (
       <section className="card">
-        <form className="form-wrapper" onSubmit={e => this.searchSchool(e, success)}> 
+        <form className="form-wrapper" onSubmit={e => this.props.searchSchool(e)}> 
           <input 
             className="searchbar searchbar--search"
             value={this.props.searchForm}

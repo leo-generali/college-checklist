@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
   NavLink
 } from 'react-router-dom';
 
@@ -13,11 +12,16 @@ import NotFound from '../NotFound/NotFound';
 
 import '../../css/styles.css';
 
+import api from '../../helpers/api.js';
+import { urlCreator } from '../../helpers/url_creator.js';
+
+
 class App extends Component {
   constructor() {
     super();
 
     this.updateSearch=this.updateSearch.bind(this);
+    this.searchSchool=this.searchSchool.bind(this);
 
     this.state = {
       searchForm: "",
@@ -28,6 +32,23 @@ class App extends Component {
   updateSearch = (e) => {
     const searchForm = e.currentTarget.value;
     this.setState({searchForm: searchForm})
+  }
+
+  searchSchool(event) {
+    event.preventDefault();
+    const that = this;
+    const mods = urlCreator();
+    const name = this.state.searchForm;
+    const url = 
+      api.prefix + 
+      name + "&_fields=" +
+      mods +
+      api.key;
+    fetch(url).then(function(response){
+      return response.json();
+    }).then(function(json){
+      that.setState({collegeInfo: json.results[0]});
+    });
   }
 
   render() {
@@ -59,7 +80,9 @@ class App extends Component {
               exact path="/" 
               render={ () => <Search 
                 searchForm={this.state.searchForm}
+                collegeInfo={this.state.collegeInfo}
                 updateSearch={this.updateSearch}
+                searchSchool={this.searchSchool}
               />}
             />
             <Route path="/about" component={About} />
