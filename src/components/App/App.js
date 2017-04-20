@@ -9,6 +9,7 @@ import About from '../About/About';
 import Search from '../Search/Search';
 import Notes from '../Notes/Notes';
 import NotFound from '../NotFound/NotFound';
+import Result from '../Result/Result';
 
 import '../../css/styles.css';
 
@@ -76,15 +77,15 @@ class App extends Component {
             </li>
           </ul>
           <main className="body">
-            <Route 
-              exact path="/" 
-              render={ () => <Search 
+            <Route exact path="/" 
+              render={ 
+                () => <Search 
                 searchForm={this.state.searchForm}
                 collegeInfo={this.state.collegeInfo}
                 updateSearch={this.updateSearch}
-                searchSchool={this.searchSchool}
-              />}
-            />
+                searchSchool={this.searchSchool} /> }
+              />
+            
             <Route path="/about" component={About} />
             <Route path="/notes" component={Notes} />
           </main>
