@@ -6,7 +6,7 @@ class Search extends Component {
 
   updateResults() {
     if( Object.keys(this.props.collegeInfo).length > 0 ) {
-      return <Result collegeInfo={this.props.collegeInfo} />
+      return <Result collegeInfo={this.props.collegeInfo} infoYear={this.props.infoYear} />
     }
   }
 
@@ -30,7 +30,7 @@ class Search extends Component {
             </form>
 
           </section>
-            { this.updateResults() }
+          { this.updateResults() }
         </div>
 
     );

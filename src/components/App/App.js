@@ -26,7 +26,8 @@ class App extends Component {
 
     this.state = {
       searchForm: "",
-      collegeInfo: {}
+      collegeInfo: {},
+      infoYear: 2014
     }
   }
 
@@ -88,6 +89,7 @@ class App extends Component {
                 () => <Search 
                 searchForm={this.state.searchForm}
                 collegeInfo={this.state.collegeInfo}
+                infoYear={this.state.infoYear}
                 updateSearch={this.updateSearch}
                 searchSchool={this.searchSchool} /> }
                />      

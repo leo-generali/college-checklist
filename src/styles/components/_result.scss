@@ -1,4 +1,10 @@
-.results__block {
-  height: 10px;
+.results__seperatorblock {
+  height: 1rem;
   background-color: blue;
+  width: 10px;
+}
+
+.results__seperatorWrapper {
+  display: flex;
+  justify-content: center;
 }
