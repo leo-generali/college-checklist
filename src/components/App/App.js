@@ -61,7 +61,7 @@ class App extends Component {
               <NavLink 
                 className="header--item__link" 
                 activeClassName="header--item__active"
-                to="/">Search</NavLink>
+                to="/search">Search</NavLink>
               </li> 
             <li className="header--item">
               <NavLink 
@@ -77,15 +77,13 @@ class App extends Component {
             </li>
           </ul>
           <main className="body">
-            <Route exact path="/" 
-              render={ 
+            <Route exact path="/search" render={ 
                 () => <Search 
                 searchForm={this.state.searchForm}
                 collegeInfo={this.state.collegeInfo}
                 updateSearch={this.updateSearch}
                 searchSchool={this.searchSchool} /> }
-              />
-            
+               />      
             <Route path="/about" component={About} />
             <Route path="/notes" component={Notes} />
           </main>

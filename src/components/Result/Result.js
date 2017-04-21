@@ -5,9 +5,10 @@ class Result extends Component {
 
 
   render() {
+
     return (
       <section className="card">
-        <p>Result</p>
+        <p> { this.props.collegeInfo["school.name"] } </p>
       </section>
     );
   }
