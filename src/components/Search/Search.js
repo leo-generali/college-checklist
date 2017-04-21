@@ -16,7 +16,7 @@ class Search extends Component {
     }
 
     return (
-        <div>
+
           <section className="card">
             <form className="form-wrapper" onSubmit={e => this.props.searchSchool(e)}> 
               <input 
@@ -31,8 +31,7 @@ class Search extends Component {
               />
             </form>
           </section>
-          { result }
-        </div>
+
     );
   }
 }
