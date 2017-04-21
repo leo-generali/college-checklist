@@ -1,8 +1,8 @@
 .card {
-  max-width: 928px;
+  //max-width: 928px;
   
   padding: 1rem;
-  width: 100%;
+  //width: 100%;
 
   margin: 0 1rem;
 
@@ -56,4 +56,9 @@
 .searchbar--submit:hover { 
   cursor: pointer; 
   box-shadow: 0px 0px 5px 0px rgba(236,136,101,1);
+}
+
+.search-wrapper {
+  max-width: 960px;
+  width: 100%;
 }

@@ -121,9 +121,7 @@ p {
           justify-content: center; }
 
 .card {
-  max-width: 928px;
   padding: 1rem;
-  width: 100%;
   margin: 0 1rem;
   border-radius: 0.25rem;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
@@ -169,6 +167,10 @@ p {
 .searchbar--submit:hover {
   cursor: pointer;
   box-shadow: 0px 0px 5px 0px #ec8865; }
+
+.search-wrapper {
+  max-width: 960px;
+  width: 100%; }
 
 .results__seperatorblock {
   height: 1rem;

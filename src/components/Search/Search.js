@@ -14,7 +14,7 @@ class Search extends Component {
   
   render() {
     return (
-        <div>
+        <div className="search-wrapper">
           <section className="card">
             <form className="form-wrapper" onSubmit={e => this.props.searchSchool(e)}> 
               <input 
