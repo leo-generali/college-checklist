@@ -45,10 +45,17 @@ class App extends Component {
       name + "&_fields=" +
       mods +
       api.key;
+    console.log(url);
+
+
     fetch(url).then(function(response){
       return response.json();
     }).then(function(json){
-      that.setState({collegeInfo: json.results[0]});
+      const schoolInfo = json.results[0]; 
+      console.log(json.results[0]);
+      if(schoolInfo) {
+        that.setState({collegeInfo: schoolInfo});
+      }
     });
   }
 

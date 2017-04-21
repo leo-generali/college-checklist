@@ -4,19 +4,19 @@ import Result from '../Result/Result';
 
 class Search extends Component {
 
+  updateResults() {
+
+    if( Object.keys(this.props.collegeInfo).length > 0 ) {
+      return <Result collegeInfo={this.props.collegeInfo} />
+    }
+
+  }
+
 
   
   render() {
-    const searched = this.props.collegeInfo;
-    let result = null;
-    let test = Object.keys(searched).length === 0 && searched.constructor === Object;
-
-    if( !test ) {
-      result = <Result collegeInfo={this.props.collegeInfo} />
-    }
-
     return (
-
+        <div>
           <section className="card">
             <form className="form-wrapper" onSubmit={e => this.props.searchSchool(e)}> 
               <input 
@@ -30,7 +30,10 @@ class Search extends Component {
                 type="submit" 
               />
             </form>
+
           </section>
+            { this.updateResults() }
+        </div>
 
     );
   }

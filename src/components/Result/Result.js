@@ -7,6 +7,7 @@ class Result extends Component {
   render() {
 
     const school = this.props.collegeInfo;
+  
 
     return (
       <section className="card">

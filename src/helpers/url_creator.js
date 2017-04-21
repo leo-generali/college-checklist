@@ -19,9 +19,12 @@ export function urlCreator() {
     year+".completion.completion_rate_4yr_150nt", year+".completion.completion_rate_less_than_4yr_150nt"
   ];
 
+
+
   for (var i = 0; i < modifiers.length; i++) {
     modifierString += modifiers[i] + ","
   }
+
 
   return modifierString;
 
