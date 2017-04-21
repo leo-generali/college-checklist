@@ -5,11 +5,9 @@ import Result from '../Result/Result';
 class Search extends Component {
 
   updateResults() {
-
     if( Object.keys(this.props.collegeInfo).length > 0 ) {
       return <Result collegeInfo={this.props.collegeInfo} />
     }
-
   }
 
 
