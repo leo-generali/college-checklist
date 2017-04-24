@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { addCommas } from '../../helpers/add_commas.js';
 
 class Result extends Component {
 
@@ -17,9 +18,9 @@ class Result extends Component {
     schoolSizeMenPercent = Math.round(schoolSizeMenPercent * 100) / 100
     const schoolSizeWomenPercent = 100 - schoolSizeMenPercent;
 
-    const schoolSizeMenAbsolute = Math.round(schoolSizeMenPercent * schoolSize);
+    const schoolSizeMenAbsolute = addCommas(Math.round(schoolSizeMenPercent * schoolSize/100));
 
-    const schoolSizeWomenAbsolute = Math.round(schoolSizeWomenPercent * schoolSize);
+    const schoolSizeWomenAbsolute = addCommas(Math.round(schoolSizeWomenPercent * schoolSize/100));
 
     //Price Info
     const schoolPrice = school[ year + ".cost.attendance.academic_year"];
@@ -41,11 +42,11 @@ class Result extends Component {
           <span className="results__seperatorblock"/>
         </div>
         <section className="results__items">
-          <p className="results__stat" data-type={"Population"}> { schoolSize } </p>
-          <p className="results__stat"> { schoolSizeMenPercent } </p>
-          <p className="results__stat"> { schoolSizeWomenPercent } </p>
-          <p className="results__stat"> { schoolSizeMenAbsolute } </p>
-          <p className="results__stat"> { schoolSizeWomenAbsolute } </p>
+          <p className="results__stat" data-type={"Population"} data-number={schoolSize} />
+          <p className="results__stat" data-type={"% Male"} data-number={ schoolSizeMenPercent } />
+          <p className="results__stat" data-type={"% Female"} data-number={ schoolSizeWomenPercent } />
+          <p className="results__stat" data-type={"Pop. Male"} data-number={ schoolSizeMenAbsolute } />
+          <p className="results__stat" data-type={"Pop. Female"} data-number={ schoolSizeWomenAbsolute } />
         </section>
         <div className="results__seperatorWrapper">
           <span className="results__seperatorblock"/>
