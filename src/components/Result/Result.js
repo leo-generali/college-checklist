@@ -13,10 +13,13 @@ class Result extends Component {
 
     //Demographics Info
     const schoolSize = school[ year + ".student.size"];
-    const schoolSizeMenPercent = school[year + ".student.demographics.men"];
-    const schoolSizeWomenPercent = 1 - schoolSizeMenPercent;
-    const schoolSizeMenAbsolute = schoolSizeMenPercent * schoolSize;
-    const schoolSizeWomenAbsolute = schoolSizeWomenPercent * schoolSize;
+    let schoolSizeMenPercent = school[year + ".student.demographics.men"] * 100;
+    schoolSizeMenPercent = Math.round(schoolSizeMenPercent * 100) / 100
+    const schoolSizeWomenPercent = 100 - schoolSizeMenPercent;
+
+    const schoolSizeMenAbsolute = Math.round(schoolSizeMenPercent * schoolSize);
+
+    const schoolSizeWomenAbsolute = Math.round(schoolSizeWomenPercent * schoolSize);
 
     //Price Info
     const schoolPrice = school[ year + ".cost.attendance.academic_year"];
@@ -37,11 +40,13 @@ class Result extends Component {
           <p className="results__seperatorText">Demographics Info</p>
           <span className="results__seperatorblock"/>
         </div>
-        <p> { schoolSize } </p>
-        <p> { schoolSizeMenPercent } </p>
-        <p> { schoolSizeWomenPercent } </p>
-        <p> { schoolSizeMenAbsolute } </p>
-        <p> { schoolSizeWomenAbsolute } </p>
+        <section className="results__items">
+          <p className="results__stat"> { schoolSize } </p>
+          <p className="results__stat"> { schoolSizeMenPercent } </p>
+          <p className="results__stat"> { schoolSizeWomenPercent } </p>
+          <p className="results__stat"> { schoolSizeMenAbsolute } </p>
+          <p className="results__stat"> { schoolSizeWomenAbsolute } </p>
+        </section>
         <div className="results__seperatorWrapper">
           <span className="results__seperatorblock"/>
           <p className="results__seperatorText">Cost Info</p>
