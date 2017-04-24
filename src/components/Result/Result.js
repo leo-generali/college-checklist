@@ -34,7 +34,7 @@ class Result extends Component {
         <p> { schoolPublic } </p>
         <div className="results__seperatorWrapper">
           <span className="results__seperatorblock"/>
-          <p>Demographics Info</p>
+          <p className="results__seperatorText">Demographics Info</p>
           <span className="results__seperatorblock"/>
         </div>
         <p> { schoolSize } </p>
@@ -44,14 +44,14 @@ class Result extends Component {
         <p> { schoolSizeWomenAbsolute } </p>
         <div className="results__seperatorWrapper">
           <span className="results__seperatorblock"/>
-          <p>Cost Info</p>
+          <p className="results__seperatorText">Cost Info</p>
           <span className="results__seperatorblock"/>
         </div>
         <p> { schoolPrice } </p>
         <p> { schoolPriceAvg } </p>
         <div className="results__seperatorWrapper">
           <span className="results__seperatorblock"/>
-          <p>Academic Info</p>
+          <p className="results__seperatorText">Academic Info</p>
           <span className="results__seperatorblock"/>
         </div>
         <p> { schoolAdmitRate } </p>

@@ -9,9 +9,11 @@ $font-stack: -apple-system,
               "Helvetica Neue", 
                sans-serif;
 
-$header: rgba(29, 53, 87, 1);
+$header: #1D3557;
 $header-font: #FCFCFC;
-$contrast: rgba(230, 57, 70, 1);
+
+$seperator: #D4335E;
+$seperator: linear-gradient(to left, #D4335E, #E63946);
 
 $searchbar-submit-backup: #EC8865;
 $searchbar-submit: linear-gradient(to left, #EC8865, #F5A563);

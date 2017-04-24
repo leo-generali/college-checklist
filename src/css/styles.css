@@ -76,7 +76,7 @@ p {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 100%;
-  background: #1d3557;
+  background: #1D3557;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
 
 .header--item {
@@ -106,7 +106,7 @@ p {
   font-size: 1rem; }
 
 .header--item__active {
-  color: #e63946; }
+  color: red; }
 
 .header--item__link:hover {
   border: 1px solid #FCFCFC;
@@ -172,17 +172,30 @@ p {
   max-width: 960px;
   width: 100%; }
 
-.results__seperatorblock {
-  height: 1rem;
-  background-color: blue;
-  width: 10px; }
-
 .results__seperatorWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.results__seperatorblock {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 1rem;
+  margin: 1rem;
+  width: 10px;
+  background: -webkit-linear-gradient(right, #D4335E, #E63946);
+  background: linear-gradient(to left, #D4335E, #E63946);
+  border-radius: 0.25rem; }
+
+.results__seperatorText {
+  font-weight: bold;
+  letter-spacing: 0.8px; }
 
 /*# sourceMappingURL=src/css/maps/styles.css.map */
