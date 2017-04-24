@@ -41,7 +41,7 @@ class Result extends Component {
           <span className="results__seperatorblock"/>
         </div>
         <section className="results__items">
-          <p className="results__stat"> { schoolSize } </p>
+          <p className="results__stat" data-type={"Population"}> { schoolSize } </p>
           <p className="results__stat"> { schoolSizeMenPercent } </p>
           <p className="results__stat"> { schoolSizeWomenPercent } </p>
           <p className="results__stat"> { schoolSizeMenAbsolute } </p>

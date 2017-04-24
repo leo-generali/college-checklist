@@ -30,8 +30,8 @@
 
 .results__stat {
   margin: 1rem;
-  height: 70px;
-  width: 70px;
+  height: 100px;
+  width: 100px;
 
   border-radius: 100%;
   border: solid 2px #27ae60;
@@ -39,4 +39,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.results__stat::after {
+  position: absolute;
+  content: attr(data-type);
+  text-transform: uppercase;
+  background-color: #27ae60;
+  font-size: 70%;
+  text-align: center;
+
+  color: white;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  width: 80px;
+  border-radius: 20px;
 }
