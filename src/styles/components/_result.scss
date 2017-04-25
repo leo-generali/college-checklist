@@ -84,9 +84,11 @@
 
 .results__price-header {
   text-align: center;
+  flex: 1;
 }
 
 .results__price-cost {
   text-align: center;
   font-size: 1.5rem;
+  flex: 1;
 }
