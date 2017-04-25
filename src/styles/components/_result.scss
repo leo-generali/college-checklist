@@ -39,7 +39,7 @@
   position: relative;
   border-radius: 100%;
 
-  border: solid 2px #27ae60;
+  border: solid 2px $bubble;
   background-color: rgba(0,0,0,0);
 }
 
@@ -52,7 +52,7 @@
   position: absolute;
   content: attr(data-type);
   text-transform: uppercase;
-  background-color: #27ae60;
+  background-color: $bubble;
   font-size: 70%;
   text-align: center;
 
@@ -65,4 +65,28 @@
   padding: 5px 15px;
   border-radius: 20px;
   margin: 0 auto;
+}
+
+.results__price {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: $header;
+  color: $header-font;
+
+  width: 8rem;
+  height: 10rem;
+
+  @include card(1);
+}
+
+.results__price-header {
+  text-align: center;
+}
+
+.results__price-cost {
+  text-align: center;
+  font-size: 1.5rem;
 }

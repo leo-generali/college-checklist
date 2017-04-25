@@ -4,7 +4,7 @@ export function urlCreator() {
   let modifierString = "";
   const modifiers = [
     //Location Information
-    "school.name", "school.city", "school.state", "school.locale",
+    "school.name", "school.city", "school.state", "school.locale", "school.school_url",
 
     //Demographic Info
     year+".student.size", year+".student.demographics.men",
@@ -13,7 +13,7 @@ export function urlCreator() {
     year+".admissions.admission_rate.overall", year+".admissions.sat_scores.average.overall",
 
     //Cost Info
-    year+".cost.avg_net_price.private", year+".cost.avg_net_price.public", year+".cost.attendance.academic_year",
+    year+".cost.avg_net_price.private", year+".cost.avg_net_price.public", year+".cost.attendance.academic_year", "school.price_calculator_url",
 
     //Completion Rate
     year+".completion.completion_rate_4yr_150nt", year+".completion.completion_rate_less_than_4yr_150nt"

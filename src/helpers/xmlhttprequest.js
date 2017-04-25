@@ -28,18 +28,18 @@ export function getJSON(name, callback) {
 //     mods +
 //     api.key;
 
-  const request = new XMLHttpRequest();
+  // const request = new XMLHttpRequest();
   
-  request.onload = function() {
-    if (this.readyState === 4 && this.status === 200) {
-      console.log("onload");
+  // request.onload = function() {
+  //   if (this.readyState === 4 && this.status === 200) {
+  //     console.log("onload");
       
-      callback( this.responseText );
-    }
-  };
+  //     callback( this.responseText );
+  //   }
+  // };
 
-  request.open("GET", url, true);
-  request.send();
+  // request.open("GET", url, true);
+  // request.send();
 
 // }
 

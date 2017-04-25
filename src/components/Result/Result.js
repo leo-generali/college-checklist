@@ -9,6 +9,7 @@ class Result extends Component {
 
     //School Information
     const schoolName = school["school.name"];
+    const schoolUrl = school["school.school_url"];
     const schoolLocation = school["school.city"] + ", " + school["school.state"];
     const schoolPublic = school[ year + ".cost.avg_net_price.public"] ? "public" : "private";
 
@@ -25,6 +26,7 @@ class Result extends Component {
     //Price Info
     const schoolPrice = school[ year + ".cost.attendance.academic_year"];
     const schoolPriceAvg = school[ year + ".cost.avg_net_price.public"] ? school[ year + ".cost.avg_net_price.public"] : school[ year + ".cost.avg_net_price.private"];
+    const schoolNPC = school["school.price_calculator_url"];
     
     //Admissions Info
     const schoolAdmitRate = school[ year + ".admissions.admission_rate.overall"];
@@ -33,7 +35,7 @@ class Result extends Component {
     
     return (  
       <div className="results">
-        <h3> { schoolName } </h3>
+        <p> { schoolName } </p>
         <p> { schoolLocation } </p>
         <p> { schoolPublic } </p>
         <div className="results__seperatorWrapper">
@@ -42,7 +44,7 @@ class Result extends Component {
           <span className="results__seperatorblock"/>
         </div>
         <section className="results__items">
-          <p className="results__stat" data-type={"Population"} data-number={schoolSize} />
+          <p className="results__stat" data-type={"Population"} data-number={addCommas(schoolSize)} />
           <p className="results__stat" data-type={"% Male"} data-number={ schoolSizeMenPercent } />
           <p className="results__stat" data-type={"% Female"} data-number={ schoolSizeWomenPercent } />
           <p className="results__stat" data-type={"Pop. Male"} data-number={ schoolSizeMenAbsolute } />
@@ -53,17 +55,26 @@ class Result extends Component {
           <p className="results__seperatorText">Cost Info</p>
           <span className="results__seperatorblock"/>
         </div>
-        <p> { schoolPrice } </p>
-        <p> { schoolPriceAvg } </p>
+        <section className="results__items">
+          <div className="results__price">
+            <p className="results__price-header">Cost of Attendance</p> 
+            <p className="results__price-cost">{ "$" + addCommas(schoolPrice) }</p> 
+          </div>
+          <div className="results__price">
+            <p className="results__price-header">Average Net Price of Attendance</p> 
+            <p className="results__price-cost">{ "$" + addCommas(schoolPriceAvg) } </p> 
+          </div>
+        </section>
         <div className="results__seperatorWrapper">
           <span className="results__seperatorblock"/>
           <p className="results__seperatorText">Academic Info</p>
           <span className="results__seperatorblock"/>
         </div>
-        <p> { schoolAdmitRate } </p>
-        <p> { schoolAdmitSAT } </p>
-        <p> { schoolCompRate } </p>
-
+        <section className="results__items">
+          <p> { schoolAdmitRate } </p>
+          <p> { schoolAdmitSAT } </p>
+          <p> { schoolCompRate } </p>
+        </section>
       </div>
     )
   }
