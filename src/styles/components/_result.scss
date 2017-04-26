@@ -92,3 +92,17 @@
   font-size: 1.5rem;
   flex: 1;
 }
+
+.results__academic {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: $header;
+  color: $header-font;
+
+  width: 8rem;
+  height: 10rem;
+
+}

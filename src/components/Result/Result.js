@@ -58,9 +58,15 @@ class Result extends Component {
           <span className="results__seperatorblock"/>
         </div>
         <section className="results__items">
-          <p> { schoolAdmitSAT + "/1600" } </p> 
-          <p> { schoolAdmitRate } </p>
-          <p> { schoolCompRate } </p>
+          <div className="results__academic">
+            <p > { schoolAdmitSAT + "/1600" } </p> 
+          </div>
+          <div className="results__academic">
+            <p> { schoolAdmitRate } </p>
+          </div>
+          <div className="results__academic">
+            <p> { schoolCompRate } </p>
+          </div>
         </section>
         <div className="results__seperatorWrapper">
           <span className="results__seperatorblock"/>
