@@ -16,7 +16,7 @@ class Result extends Component {
     //Demographics Info
     const schoolSize = school[ year + ".student.size"];
     let schoolSizeMenPercent = school[year + ".student.demographics.men"] * 100;
-    schoolSizeMenPercent = Math.round(schoolSizeMenPercent * 100) / 100
+    schoolSizeMenPercent = Math.round(schoolSizeMenPercent * 100) / 100;
     const schoolSizeWomenPercent = 100 - schoolSizeMenPercent;
 
     const schoolSizeMenAbsolute = addCommas(Math.round(schoolSizeMenPercent * schoolSize/100));
@@ -29,9 +29,11 @@ class Result extends Component {
     const schoolNPC = school["school.price_calculator_url"];
     
     //Admissions Info
-    const schoolAdmitRate = school[ year + ".admissions.admission_rate.overall"];
     const schoolAdmitSAT = school[ year + ".admissions.sat_scores.average.overall"];
-    const schoolCompRate = school[ year + ".completion.completion_rate_4yr_150nt"] ? school[ year + ".completion.completion_rate_4yr_150nt"] : school[ year + ".completion.completion_rate_less_than_4yr_150nt"];
+    let schoolAdmitRate = school[ year + ".admissions.admission_rate.overall"];
+    schoolAdmitRate = Math.round(schoolAdmitRate * 10000) / 100;
+    let schoolCompRate = school[ year + ".completion.completion_rate_4yr_150nt"] ? school[ year + ".completion.completion_rate_4yr_150nt"] : school[ year + ".completion.completion_rate_less_than_4yr_150nt"];
+    schoolCompRate = Math.round(schoolCompRate * 10000) / 100;
     
     return (  
       <div className="results">
@@ -52,6 +54,16 @@ class Result extends Component {
         </section>
         <div className="results__seperatorWrapper">
           <span className="results__seperatorblock"/>
+          <p className="results__seperatorText">Academic Info</p>
+          <span className="results__seperatorblock"/>
+        </div>
+        <section className="results__items">
+          <p> { schoolAdmitSAT + "/1600" } </p> 
+          <p> { schoolAdmitRate } </p>
+          <p> { schoolCompRate } </p>
+        </section>
+        <div className="results__seperatorWrapper">
+          <span className="results__seperatorblock"/>
           <p className="results__seperatorText">Cost Info</p>
           <span className="results__seperatorblock"/>
         </div>
@@ -64,16 +76,6 @@ class Result extends Component {
             <p className="results__price-header">Average Net Price of Attendance</p> 
             <p className="results__price-cost">{ "$" + addCommas(schoolPriceAvg) } </p> 
           </div>
-        </section>
-        <div className="results__seperatorWrapper">
-          <span className="results__seperatorblock"/>
-          <p className="results__seperatorText">Academic Info</p>
-          <span className="results__seperatorblock"/>
-        </div>
-        <section className="results__items">
-          <p> { schoolAdmitRate } </p>
-          <p> { schoolAdmitSAT } </p>
-          <p> { schoolCompRate } </p>
         </section>
       </div>
     )
