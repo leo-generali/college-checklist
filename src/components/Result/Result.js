@@ -34,7 +34,7 @@ class Result extends Component {
     schoolAdmitRate = Math.round(schoolAdmitRate * 10000) / 100;
     let schoolCompRate = school[ year + ".completion.completion_rate_4yr_150nt"] ? school[ year + ".completion.completion_rate_4yr_150nt"] : school[ year + ".completion.completion_rate_less_than_4yr_150nt"];
     schoolCompRate = Math.round(schoolCompRate * 10000) / 100;
-    
+
     return (  
       <div className="results">
         <p> { schoolName } </p>
@@ -67,6 +67,8 @@ class Result extends Component {
           <div className="results__academic">
             <p> { schoolCompRate } </p>
           </div>
+
+
         </section>
         <div className="results__seperatorWrapper">
           <span className="results__seperatorblock"/>
