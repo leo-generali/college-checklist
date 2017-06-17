@@ -27,6 +27,7 @@ class App extends Component {
     this.state = {
       searchForm: "",
       collegeInfo: {},
+      notes: [],
       infoYear: 2014
     }
   }
@@ -75,13 +76,13 @@ class App extends Component {
               <NavLink 
                 className="header--item__link" 
                 activeClassName="header--item__active"
-                to="/about">About</NavLink>
+                to="/notes">Notes</NavLink>
             </li>
             <li className="header--item">
               <NavLink 
                 className="header--item__link" 
                 activeClassName="header--item__active"
-                to="/notes">Notes</NavLink>
+                to="/about">About</NavLink>
             </li>
           </ul>
           <main className="body">

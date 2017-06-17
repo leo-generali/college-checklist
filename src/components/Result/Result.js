@@ -37,8 +37,8 @@ class Result extends Component {
 
     return (  
       <div className="results">
-        <p> { schoolName } </p>
-        <p> { schoolLocation } </p>
+        <h1> { schoolName } </h1>
+        <h3> { schoolLocation } </h3>
         <p> { schoolPublic } </p>
         <div className="results__seperatorWrapper">
           <span className="results__seperatorblock"/>
