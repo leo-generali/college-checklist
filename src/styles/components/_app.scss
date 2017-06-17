@@ -30,11 +30,19 @@ body {
 	flex-basis: 0;
 	padding: 0.5rem;
 
+
 	@include font-size(1);
 }
 
 .header--item__active {
+
 	color: orange;
+
+  // border: 2px solid transparent;
+
+  // border-image: linear-gradient(to bottom right, #3acfd5 0%, #3a4ed5 100%);
+  // border-radius: 1rem;
+  // border-image-slice: 1;
 }
 
 .header--item__link:hover {
