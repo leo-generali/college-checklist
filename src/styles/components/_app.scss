@@ -1,3 +1,8 @@
+body {
+	height: 100vh;
+	background: $body-background;
+}
+
 .app {
 	font-family: $font-stack;
 }
@@ -6,7 +11,7 @@
 	display: flex;
 
 	background: $header;
-	@include card(1);
+	@include card(1, black);
 }
 
 .header--item {

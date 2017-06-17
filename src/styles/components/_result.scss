@@ -1,8 +1,15 @@
-
 .results__seperatorWrapper {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.results__school-info {
+  display: flex;
+}
+
+.half-col {
+  width: 50%;
 }
 
 .results__seperatorblock {
@@ -79,7 +86,7 @@
   width: 8rem;
   height: 10rem;
 
-  @include card(1);
+  @include card(1, black);
 }
 
 .results__price-header {
@@ -91,9 +98,4 @@
   text-align: center;
   font-size: 1.5rem;
   flex: 1;
-}
-
-.results__academic {
-
-
 }

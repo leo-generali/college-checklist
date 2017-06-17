@@ -25,10 +25,12 @@ class Result extends Component {
       const schoolPublic = school[ year + ".cost.avg_net_price.public"] ? "public" : "private";
 
       const schoolInfo = 
-      <section>
-        <h1> { schoolName } </h1>
-        <h3> { schoolLocation } </h3>
-        <p> { schoolPublic } </p>
+      <section className="results__school-info">
+        <div className="half-col">
+          <h1> { schoolName } </h1>
+          <h3> { schoolLocation } </h3>
+        </div>
+        <p className="half-col half-col--public-private"> { schoolPublic } </p>
       </section>
       return schoolInfo
     }

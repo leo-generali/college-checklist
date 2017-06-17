@@ -9,29 +9,37 @@
 
   border-radius: 0.25rem;
 
-  @include card(1);
+  @include card(1, black);
 }
 
 .form-wrapper {
+  margin: 0 5rem;
+  max-width: 960px;
   display: flex; 
   flex-direction: row;
 }
 
+.results__school-info {
+  display: flex;
+}
+
+.half-col--public-private {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .searchbar {
   border: 0;
-
   padding: 6px 15px 6px 15px;
-
   font-family: $font-stack;
 }
 
 .searchbar--search {
-  border-radius: 0;
-  border-radius: 0.25rem 0 0 0.25rem ;
-  border-top: solid 1px grey;
-  border-bottom: solid 1px grey;
-  border-left: solid 1px grey;
+  @include card(3, black);
 
+  margin-right: 1rem;
+  border-radius: 0.5rem;
   width: 100%;
 
   padding-bottom: 5px;
@@ -39,10 +47,13 @@
 }
 
 .searchbar--submit {
+  @include card(3, black);
+
   color: $header-font;
   font-weight: bold;
   letter-spacing: 0.8px;
   width: 100px;
+  padding: 1rem;
 
   flex-grow: 1;
 
@@ -51,12 +62,14 @@
 
   -webkit-appearance: none;
 
-  border-radius: 0 0.25rem 0.25rem 0;
+  transition: 0.2s;
+  border-radius: 0.5rem;
 }
 
-.searchbar--submit:hover { 
+.searchbar--submit:hover {
+  transform: translateY(-1px);
+  @include card(4, black);
   cursor: pointer; 
-  box-shadow: 0px 0px 5px 0px rgba(236,136,101,1);
 }
 
 .search-wrapper {
