@@ -4,6 +4,7 @@ import { addCommas } from '../../helpers/add_commas.js';
 class Result extends Component {
 
   populateResults() {
+    
     const school = this.props.collegeInfo;
     const year = this.props.infoYear;
 
