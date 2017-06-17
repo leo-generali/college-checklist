@@ -1,17 +1,3 @@
-.card {
-  //max-width: 928px;
-  background: white;
-  
-  padding: 1rem;
-  //width: 100%;
-
-  margin: 0 1rem 1rem;
-
-  border-radius: 0.25rem;
-
-  @include card(1, black);
-}
-
 .form-wrapper {
   margin: 0 5rem;
   max-width: 960px;

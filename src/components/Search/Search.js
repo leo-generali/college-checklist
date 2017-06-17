@@ -13,7 +13,7 @@ class Search extends Component {
   render() {
     return (
         <div className="search-wrapper">
-          <section>
+          <section className="margin-spacer">
             <form className="form-wrapper" onSubmit={e => this.props.searchSchool(e)}> 
               <input 
                 className="searchbar searchbar--search"
