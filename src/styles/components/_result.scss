@@ -1,25 +1,25 @@
 
 .results__seperatorWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .results__seperatorblock {
-  flex-grow: 1;
-  
-  height: 1rem;
-  margin: 1rem;
-  width: 10px;
-  
-  background: $seperator;
-  
-  border-radius: 0.25rem;
+	flex-grow: 1;
+
+	height: 1rem;
+	margin: 1rem;
+	width: 10px;
+
+	background: $seperator;
+
+	border-radius: 0.25rem;
 }
 
 .results__seperatorText {
-  font-weight: bold;
-  letter-spacing: 0.8px;
+	font-weight: bold;
+	letter-spacing: 0.8px;
 }
 
 .results__items {

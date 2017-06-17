@@ -1,49 +1,43 @@
 .app {
-  font-family: $font-stack;
+	font-family: $font-stack;
 }
 
 .header {
-  display: flex;
-  justify-content: space-around;
+	display: flex;
 
-  width: 100%;
-
-  background: $header;
-  @include card(1);
+	background: $header;
+	@include card(1);
 }
 
 .header--item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5rem;
 
-  color: white;
-}
-
-.acive {
-  color: red;
+	color: white;
 }
 
 .header--item__link {
-  color: $header-font;
-  text-decoration: none;
-  padding: 1rem 20px;
-  flex-grow: 1;
-  flex-basis: 0;
+	color: $header-font;
+	text-decoration: none;
+	flex-grow: 1;
+	flex-basis: 0;
+	padding: 0.5rem;
 
-  @include font-size(1);
+	@include font-size(1);
 }
 
 .header--item__active {
-  color: red;
+	color: orange;
 }
 
 .header--item__link:hover {
-  border: 1px solid $header-font;
-  margin: -1px;
+	transition: 0.1s;
+	opacity: 0.5;
 }
 
 .body {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
